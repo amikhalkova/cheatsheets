@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Demo JQ</title>
+	<link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+</head>
+<body>
+	<!-- SOME AS PREVIEWS BUT JQUERY -->
+	<button onclick="vote()" id="button">Голосовать!</button>
+	<script type="text/javascript" src="jquery-2.2.2.min.js"></script>
+
+	<script>
+		function vote() {
+			$("#button").html(' ... ');
+			$.ajax({
+				method: "GET",
+				url: "vote",
+				success: function(result) {
+					$("#button").html(result);
+				},
+				fail: function(jqXHR, textStatus) {
+					alert("Request failed: " + textStatus);
+				}
+			});
+		}
+	</script>
+</body>
+</html>
