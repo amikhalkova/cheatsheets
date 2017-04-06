@@ -92,7 +92,10 @@ fetchAsync()
 ```
 
 >См.  
-[Стандарт](https://fetch.spec.whatwg.org),  
-[javascript.ru](https://learn.javascript.ru/fetch),  
-[Полифил и много примеров, под капотом юзает xhr](https://github.com/github/fetch),  
-[Проддержка в браузерах](http://caniuse.com/#search=fetch)
+[Ajax на javascript.ru](https://learn.javascript.ru/ajax),  
+[Спецификация XMLHttpRequest](https://www.w3.org/TR/2012/NOTE-XMLHttpRequest1-20120117/),  
+[jQuery.ajax](http://api.jquery.com/jquery.ajax/),  
+[Спецификация fetch](https://fetch.spec.whatwg.org),  
+[Fetch на javascript.ru](https://learn.javascript.ru/fetch),  
+[Полифил fetch и много примеров, под капотом юзает xhr](https://github.com/github/fetch),  
+[Проддержка fetch в браузерах](http://caniuse.com/#search=fetch)
