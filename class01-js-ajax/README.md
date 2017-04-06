@@ -1,6 +1,6 @@
 # JS AJAX
 
-## Классический вариант вызова
+## Классический вариант вызова XHR
 
 ```js
 var xhr = new XMLHttpRequest();
@@ -20,7 +20,7 @@ xhr.onreadystatechange = function() {
 xhr.send(null);
 ```
 
-## JQuery вариант вызова
+## JQuery вариант вызова (обертка xhr)
 
 ```js
 $("#button").html(' ... ');
@@ -35,5 +35,22 @@ $.ajax({
 	}
 });
 ```
+## Метод fetch: замена XMLHttpRequest
 
+При вызове fetch возвращает промис, который, когда получен ответ, выполняет коллбэки с объектом Response или с ошибкой, если запрос не удался.
 
+```js
+fetch('/article/fetch/user.json')
+  .then(function(response) {
+    // alert(response.headers.get('Content-Type')); // application/json; charset=utf-8
+    // alert(response.status); // 200
+
+    return response.json();
+   })
+  .then(function(user) {
+    alert(user.name);
+  })
+  .catch( alert );
+```
+
+>См. [javascript.ru](https://learn.javascript.ru/fetch), [habrahabr](https://habrahabr.ru/post/252941/), [Стандарт](https://fetch.spec.whatwg.org), [Полифил и много примеров, под капотом юзает xhr](https://github.com/github/fetch), [Проддержка в браузерах](http://caniuse.com/#search=fetch)
