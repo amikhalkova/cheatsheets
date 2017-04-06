@@ -39,6 +39,8 @@ $.ajax({
 
 При вызове fetch возвращает промис, который, когда получен ответ, выполняет коллбэки с объектом Response или с ошибкой, если запрос не удался.
 
+ES5 (2009)
+
 ```js
 fetch('/article/fetch/user.json')
   .then(function(response) {
@@ -52,7 +54,7 @@ fetch('/article/fetch/user.json')
   });
 ```
 
-ES6
+ES6 (2015)
 
 ```js
 fetch('/article/fetch/user.json')
@@ -61,7 +63,7 @@ fetch('/article/fetch/user.json')
   .catch(e => alert(e))
 ```
 
-ES7
+ES2016 (ES7)
 
 ```js
 (async() => {
@@ -72,7 +74,21 @@ ES7
   } catch (e) {
     alert(e)
   }
-})();
+})(); // тут же вызываем
+```
+
+или в виде отдельной функции
+
+```js
+async function fetchAsync () {
+  let response = await fetch('/article/fetch/user.json');
+  let user = await response.json();
+  return user;
+}
+
+fetchAsync()
+    .then(user => alert(user.name))
+    .catch(e => alert(e))
 ```
 
 >См.  
