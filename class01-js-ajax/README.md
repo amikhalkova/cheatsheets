@@ -53,8 +53,8 @@ fetch('/article/fetch/user.json')
   .catch( alert );
 ```
 
->См. [Стандарт](https://fetch.spec.whatwg.org), 
-[javascript.ru](https://learn.javascript.ru/fetch), 
-[habrahabr](https://habrahabr.ru/post/252941/), 
-[Полифил и много примеров, под капотом юзает xhr](https://github.com/github/fetch), 
+>См. [Стандарт](https://fetch.spec.whatwg.org),  
+[javascript.ru](https://learn.javascript.ru/fetch),  
+[habrahabr](https://habrahabr.ru/post/252941/),  
+[Полифил и много примеров, под капотом юзает xhr](https://github.com/github/fetch),  
 [Проддержка в браузерах](http://caniuse.com/#search=fetch)
