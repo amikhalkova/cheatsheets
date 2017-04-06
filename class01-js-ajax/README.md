@@ -39,7 +39,7 @@ $.ajax({
 
 При вызове fetch возвращает промис, который, когда получен ответ, выполняет коллбэки с объектом Response или с ошибкой, если запрос не удался.
 
-ES5 (2009)
+###ES5 (2009)
 
 ```js
 fetch('/article/fetch/user.json')
@@ -54,7 +54,7 @@ fetch('/article/fetch/user.json')
   });
 ```
 
-ES6 (2015)
+###ES6 (2015)
 
 ```js
 fetch('/article/fetch/user.json')
@@ -63,7 +63,7 @@ fetch('/article/fetch/user.json')
   .catch(e => alert(e))
 ```
 
-ES2016 (ES7)
+###ES2016 (ES7)
 
 ```js
 (async() => {
